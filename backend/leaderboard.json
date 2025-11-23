@@ -1,0 +1,102 @@
+{
+  "submissions": [
+    {
+      "submission_id": "957fbb30",
+      "task_id": 0,
+      "score": 30,
+      "timestamp": "2025-11-20T00:14:10.565920",
+      "status": "success"
+    },
+    {
+      "submission_id": "b915e09e",
+      "task_id": 0,
+      "score": 30,
+      "timestamp": "2025-11-20T00:14:16.232727",
+      "status": "success"
+    },
+    {
+      "submission_id": "0fc054d3",
+      "task_id": 0,
+      "score": 30,
+      "timestamp": "2025-11-20T00:16:44.896304",
+      "status": "success"
+    },
+    {
+      "submission_id": "de19ea27",
+      "task_id": 0,
+      "score": 30,
+      "timestamp": "2025-11-20T00:18:00.528882",
+      "status": "success"
+    },
+    {
+      "submission_id": "9df43f4c",
+      "task_id": 0,
+      "score": 30,
+      "timestamp": "2025-11-20T00:32:48.715347",
+      "status": "success"
+    },
+    {
+      "submission_id": "3ed2b522",
+      "task_id": 1,
+      "score": 0,
+      "timestamp": "2025-11-20T00:33:29.731493",
+      "status": "success"
+    },
+    {
+      "submission_id": "17340a92",
+      "task_id": 2,
+      "score": 0.7167,
+      "timestamp": "2025-11-20T00:33:37.744388",
+      "status": "success"
+    },
+    {
+      "submission_id": "aa1978e8",
+      "task_id": 3,
+      "score": 0,
+      "timestamp": "2025-11-20T00:33:46.511740",
+      "status": "error"
+    },
+    {
+      "submission_id": "aab796d8",
+      "task_id": 0,
+      "score": 30,
+      "timestamp": "2025-11-20T08:55:23.020110",
+      "status": "success"
+    },
+    {
+      "submission_id": "9d9f4a2e",
+      "task_id": 0,
+      "score": 20,
+      "timestamp": "2025-11-20T08:55:54.615344",
+      "status": "success"
+    },
+    {
+      "submission_id": "62bd9e08",
+      "task_id": 1,
+      "score": 0,
+      "timestamp": "2025-11-20T08:57:11.912480",
+      "status": "success"
+    },
+    {
+      "submission_id": "0696f8f6",
+      "task_id": 2,
+      "score": 0.7167,
+      "timestamp": "2025-11-20T08:57:37.502821",
+      "status": "success"
+    },
+    {
+      "submission_id": "13de1e1a",
+      "task_id": 0,
+      "score": 30,
+      "timestamp": "2025-11-20T11:05:04.684921",
+      "status": "success"
+    },
+    {
+      "submission_id": "efe93006",
+      "task_id": 0,
+      "score": 30,
+      "timestamp": "2025-11-20T14:19:46.969221",
+      "status": "success"
+    }
+  ]
+}

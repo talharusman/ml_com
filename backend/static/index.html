@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1-Score Grand Prix</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+    <!-- HOME PAGE -->
+    <div id="home-page" class="page active">
+        <div class="hero-section-background">
+            <img src="/static/images/homepage.jpg" class="hero-bg-image">
+            <div class="hero-buttons-container">
+                <button class="btn-bottom-left" onclick="navigateTo('challenges')">Start Competition</button>
+                <button class="btn-bottom-right" onclick="navigateTo('leaderboard')">Leaderboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHALLENGES PAGE -->
+    <div id="challenges-page" class="page">
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">🏁 F1-Score</div>
+                <a href="#" onclick="navigateTo('home')" class="nav-back">← Back to Home</a>
+            </div>
+        </nav>
+
+        <main class="container">
+
+            <div class="step left red">
+                <a href="#" class="color-bar" onclick="openTaskDetail(0)">
+                    <p class="text">Understanding <br>& Goal Setting</p>
+                    <img src="/static/images/wheel1.png" class="wheel" />
+                </a>
+                <div class="number">01</div>
+            </div>
+
+            <div class="step right yellow">
+                <div class="number">02</div>
+                <a href="#" class="color-bar" onclick="openTaskDetail(1)">
+                    <p class="text right-text">Initial Research <br>& Inspiration</p>
+                    <img src="/static/images/wheel2.png" class="wheel" />
+                </a>
+            </div>
+
+            <div class="step left blue">
+                <a href="#" class="color-bar" onclick="openTaskDetail(2)">
+                    <p class="text">Brainstorming <br>& Ideation</p>
+                    <img src="/static/images/wheel3.png" class="wheel" />
+                </a>
+                <div class="number">03</div>
+            </div>
+
+            <div class="step right gray">
+                <div class="number">04</div>
+                <a href="#" class="color-bar" onclick="openTaskDetail(3)">
+                    <p class="text right-text">Wireframing <br>& Prototyping</p>
+                    <img src="/static/images/wheel4.png" class="wheel" />
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- LEADERBOARD PAGE -->
+    <div id="leaderboard-page" class="page">
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">🏁 F1-Score</div>
+                <a href="#" onclick="navigateTo('home')" class="nav-back">← Back to Home</a>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="container">
+                <h1 class="logo">Global Leaderboard</h1>
+                <p class="tagline">Top performers across all questions</p>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="section">
+                <h2>Rankings</h2>
+
+                <div class="leaderboard-filters">
+                    <button class="filter-btn active" onclick="filterLeaderboard('all')">All Questions</button>
+                    <button class="filter-btn" onclick="filterLeaderboard(1)">Question 1</button>
+                    <button class="filter-btn" onclick="filterLeaderboard(2)">Question 2</button>
+                    <button class="filter-btn" onclick="filterLeaderboard(3)">Question 3</button>
+                    <button class="filter-btn" onclick="filterLeaderboard(4)">Question 4</button>
+                </div>
+
+                <div class="leaderboard-container">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Question</th>
+                                <th>Participant ID</th>
+                                <th>Score</th>
+                                <th>Total Submissions</th>
+                                <th>Timestamp</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody">
+                            <tr>
+                                <td colspan="6" style="text-align:center;">No submissions yet</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- TASK DETAIL MODAL -->
+    <!-- TASK DETAIL MODAL -->
+    <div id="taskDetailModal" class="modal">
+        <div class="modal-backdrop"></div>
+
+
+        <div class="f1-modal-frame">
+            <div class="f1-question-image">
+                <img id="questionBackgroundImg" alt="">
+            </div>
+
+
+            <span class="f1-close" onclick="closeTaskModal()">×</span>
+
+            <div class="f1-description-box">
+                <h2 id="taskDetailTitle"></h2>
+                <p id="taskDetailDescription"></p>
+            </div>
+
+            <div class="f1-center-scroll">
+                <div class="f1-editor-title">TEMPLATE CODE</div>
+                <textarea id="templateEditor" class="f1-code-editor"></textarea>
+            </div>
+
+            <div class="f1-bottom-controller">
+                <div class="controller-score">
+                    <span class="controller-label">LATEST SCORE</span>
+                    <span class="controller-value" id="taskScore">--</span>
+                </div>
+
+                <div class="controller-buttons-left">
+                    <button class="f1-btn" onclick="closeTaskModal()">CLOSE</button>
+                </div>
+
+                <div class="controller-buttons-right">
+                    <button class="f1-btn primary" onclick="submitEditedCode()">SUBMIT</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <p>&copy; 2025 F1-Score Grand Prix. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/upload.js"></script>
+</body>
+
+</html>

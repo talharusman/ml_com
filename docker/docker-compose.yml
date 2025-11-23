@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../backend:/app/backend
+      - ../sample_data_generation.py:/app/sample_data_generation.py
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python3 backend/main.py
