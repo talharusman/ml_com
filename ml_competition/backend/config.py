@@ -3,6 +3,7 @@ Flask configuration for F1-Score Grand Prix ML Competition Platform
 """
 
 import os
+import warnings
 from pathlib import Path
 from datetime import timedelta
 
@@ -13,8 +14,15 @@ class Config:
     # Flask settings
     SECRET_KEY = os.getenv("SECRET_KEY", "change-this-secret-key")
     
+    # Warn if using default secret key
+    if SECRET_KEY == "change-this-secret-key":
+        warnings.warn(
+            "Using default SECRET_KEY. Set SECRET_KEY environment variable for production.",
+            UserWarning
+        )
+    
     # JWT settings
-    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", os.getenv("SECRET_KEY", "change-this-secret-key"))
+    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", SECRET_KEY)
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(minutes=60 * 24)
     JWT_TOKEN_LOCATION = ["headers"]
     JWT_HEADER_NAME = "Authorization"
