@@ -12,7 +12,9 @@ yarn-error.log*
 *.log
 
 # Env / secrets
-.env*
+.env
+.env.local
+.env.*.local
 
 # Vercel
 .vercel
@@ -34,6 +36,8 @@ venv/
 *.sqlite3
 backend/database/db.sqlite3
 backend/submissions/*
+ml_competition/backend/database/db.sqlite3
+ml_competition/backend/submissions/*
 
 # OS / editor
 .DS_Store
